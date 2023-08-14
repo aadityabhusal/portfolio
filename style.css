@@ -194,6 +194,7 @@ header {
 section {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .about-text {
@@ -208,7 +209,7 @@ section {
   justify-content: center;
 }
 
-.icon-list a {
+.icon-list li {
   font-size: 30px;
   margin: 5px 10px;
   color: #ecf0f1;
@@ -221,13 +222,6 @@ footer {
   line-height: 1.5;
   max-width: 1160px;
   margin: 20px auto;
-}
-
-#about,
-#skills,
-#projects,
-#contact {
-  padding: 20px;
 }
 
 #about > .content-section > .content-info > * {
