@@ -201,6 +201,7 @@ section {
   font-size: 18px;
   line-height: 1.5;
   flex: 2;
+  padding: 0 10px;
 }
 
 .icon-list {
@@ -351,8 +352,13 @@ footer {
   flex-wrap: wrap;
 }
 
+#project-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+}
+
 .project {
-  flex: 1 1 100%;
   display: flex;
   border-radius: 5px;
   padding: 10px;
@@ -380,12 +386,13 @@ footer {
 
 .project-tech-stack {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 10px;
   font-size: 14px;
 }
 
 .project-tech-stack li {
-  margin-right: 20px;
   padding: 4px 10px;
   border: 1px solid #ecf0f1;
   border-radius: 10px;
@@ -481,12 +488,17 @@ footer {
     width: 150px;
   }
 
+  .about-text {
+    text-align: center;
+  }
+
   #about,
   #projects {
     padding: 20px 5px;
   }
 
   .project-image {
+    flex: 1;
     margin-bottom: 10px;
   }
 
