@@ -21,6 +21,10 @@ a {
   color: #ecf0f1;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 i {
   transition: 0.5s;
   margin: 0 5px;
@@ -132,6 +136,7 @@ header {
   opacity: 0.8;
   background: #2f3640;
   color: #ecf0f1;
+  text-decoration: none;
 }
 
 .active-menu,
@@ -257,6 +262,7 @@ footer {
 #timeline {
   display: flex;
   justify-content: center;
+  padding-top: 40px;
 }
 
 .tl-item {
@@ -295,6 +301,7 @@ footer {
 .tl-info,
 .tl-place {
   padding: 0 20px;
+  height: 54px;
 }
 
 .tl-sub {
