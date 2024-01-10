@@ -47,7 +47,6 @@ header {
   box-sizing: border-box;
   transition: 1s ease;
   box-shadow: 0 -10px 10px 10px rgba(0, 0, 0, 0.3);
-  /*z-index: 100;*/
 }
 
 #menu {
@@ -120,7 +119,6 @@ header {
 .headlist {
   display: flex;
   justify-content: flex-start;
-  /*width: 400px;*/
 }
 
 .headlist a,
@@ -137,12 +135,6 @@ header {
   background: #2f3640;
   color: #ecf0f1;
   text-decoration: none;
-}
-
-.active-menu,
-.active-li {
-  background: #353b48;
-  color: #ecf0f1 !important;
 }
 
 #main-bg {
@@ -247,8 +239,8 @@ footer {
 
 .content-sub-title {
   font-weight: bold;
-  font-size: 20px !important;
-  margin: 30px 0 !important;
+  font-size: 20px;
+  margin: 30px 0;
 }
 
 .content-list li {
@@ -424,6 +416,19 @@ footer {
   width: 20px;
   height: 20px;
   margin-right: 5px;
+}
+
+#github-chart {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#github-chart > * {
+  flex: 1 0 1;
+  margin: 10px 0;
 }
 
 #scroll-to-top {
