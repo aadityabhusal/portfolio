@@ -15,14 +15,13 @@ ul {
 }
 
 a {
-  text-decoration: none;
-  transition: 0.5s;
+  text-decoration: underline;
   cursor: pointer;
   color: #ecf0f1;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-shadow: 0 0 15px #fff;
 }
 
 i {
@@ -42,11 +41,22 @@ header {
   justify-content: flex-end;
   padding: 0 20px;
   width: 100%;
-  height: 60px;
-  line-height: 60px;
+  height: 65px;
+  line-height: 65px;
   box-sizing: border-box;
   transition: 1s ease;
   box-shadow: 0 -10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-blue {
+  position: absolute;
+  inset: 0;
+  height: 200%;
+  background: linear-gradient(to bottom, #222222 0%, transparent 50%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  mask-image: linear-gradient(to bottom, black 0% 50%, transparent 50% 100%);
+  pointer-events: none;
 }
 
 #menu {
@@ -55,7 +65,7 @@ header {
   width: 100vw;
   height: 100vh;
   padding: 10px 30px;
-  background: #353b48;
+  background: #222222;
   z-index: 100;
   transition: 0.5s ease;
   box-sizing: border-box;
@@ -72,8 +82,8 @@ header {
 
 .menulist li {
   flex: 1;
-  min-height: 60px;
-  line-height: 60px;
+  min-height: 65px;
+  line-height: 65px;
 }
 
 .menulist a {
@@ -96,8 +106,8 @@ header {
 }
 
 #image-logo {
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
   border-radius: 100%;
   border: 2px solid #ecf0f1;
   overflow: hidden;
@@ -127,14 +137,15 @@ header {
   font-size: 22px;
   color: #ecf0f1;
   padding: 0 20px;
+  transition: 0.2s;
+  text-decoration: none;
 }
 
 .headlist a:hover,
 .menulist a:hover {
   opacity: 0.8;
-  background: #2f3640;
-  color: #ecf0f1;
-  text-decoration: none;
+  text-shadow: 0 0 20px #fff, 0 0 25px #fff, 0 0 30px #fff;
+  color: white;
 }
 
 #main-bg {
@@ -152,7 +163,7 @@ header {
   width: 100%;
   margin: 10% auto 0 auto;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 65px;
 }
 
 #main-img {
@@ -429,6 +440,10 @@ footer {
 #github-chart > * {
   flex: 1 0 1;
   margin: 10px 0;
+}
+
+#github-chart img {
+  width: 100%;
 }
 
 #scroll-to-top {

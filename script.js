@@ -15,15 +15,12 @@ document
 
 document.addEventListener("scroll", function () {
   var winHeight = (60 / 100) * window.innerHeight;
-  var headSection = document.getElementById("head-section");
   var imgLogo = document.getElementsByClassName("home-image-logo")[0];
 
-  if (window.pageYOffset > winHeight) {
-    headSection.style.background = "rgba(53, 59, 72,1)";
+  if (window.scrollY > winHeight) {
     imgLogo.style.transform = "translate(0,0)";
     scrollToTop.style.display = "block";
   } else {
-    headSection.style.background = "rgba(0, 0, 0, 0)";
     imgLogo.style.transform = "translate(-150px, 0)";
     scrollToTop.style.display = "none";
   }
@@ -31,7 +28,7 @@ document.addEventListener("scroll", function () {
 
 var header = document.getElementById("main-bg");
 function scroll() {
-  var offset = window.pageYOffset;
+  var offset = window.scrollY;
   var rate = offset / 2;
   header.style.backgroundPosition = "50% calc(50% + " + rate + "px)";
 }
