@@ -28,6 +28,19 @@ i {
   transition: 0.5s;
   margin: 0 5px;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+strong {
+  font-weight: bolder;
+}
 
 header {
   position: fixed;
@@ -241,17 +254,11 @@ footer {
 
 .content-title {
   font-size: 32px;
-  color: #7f8c8d;
+  color: #bdc3c7;
   margin: 20px 0px;
-  border-bottom: 2px solid #7f8c8d;
+  border-bottom: 2px solid #bdc3c7;
   opacity: 1;
   transform: translate(0, 0);
-}
-
-.content-sub-title {
-  font-weight: bold;
-  font-size: 20px;
-  margin: 30px 0;
 }
 
 .content-list li {
@@ -330,8 +337,7 @@ footer {
   width: 50px;
 }
 
-.skill,
-.skill-small {
+.skill {
   text-align: center;
   position: relative;
   flex: 0 0 100px;
@@ -339,46 +345,66 @@ footer {
   padding-bottom: 15px;
 }
 
-.skill:after,
-.skill-small::after {
-  content: "";
-  background: springgreen;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 100%;
+.company-head {
+  display: flex;
+  gap: 20px;
 }
 
-.skill-small::after {
-  background: gold;
-  width: 50%;
+.company {
+  flex-direction: column;
 }
 
-#projects .content-section {
+.company-image {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+}
+
+.company-head-info h3 {
+  font-size: 18px;
+}
+.company-head-info h4 {
+  font-size: 16px;
+}
+.company-head-info p {
+  font-size: 15px;
+}
+
+.company-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-left: 85px;
+}
+
+.content-section {
   display: flex;
   line-height: 1.5;
   margin-top: 20px;
   flex-wrap: wrap;
 }
 
-#project-list {
+#project-list,
+#work-list {
   display: flex;
   flex-direction: column;
   max-width: 100vw;
 }
 
-.project {
+.project,
+.company {
   display: flex;
-  border-radius: 5px;
+  gap: 20px;
   padding: 10px;
   padding-bottom: 20px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #bdc3c7;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #bdc3c7;
 }
 
 .project-image {
-  flex: 0 0 25%;
+  flex: 0 0 233px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -390,7 +416,9 @@ footer {
 }
 
 .project-info {
-  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   font-size: 16px;
 }
 
@@ -398,7 +426,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 10px;
   font-size: 14px;
 }
 
@@ -409,12 +436,10 @@ footer {
 }
 
 .project-name {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 22px;
 }
 
 .project-links {
-  margin-top: 30px;
   display: flex;
 }
 .project-links > a {
@@ -431,19 +456,16 @@ footer {
 
 #github-chart {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 30px;
-}
-
-#github-chart > * {
-  flex: 1 0 1;
-  margin: 10px 0;
+  padding: 10px;
 }
 
 #github-chart img {
-  width: 100%;
+  margin-top: 20px;
+  margin-left: 10%;
+  width: 80%;
 }
 
 #scroll-to-top {
@@ -465,6 +487,10 @@ footer {
   #main-img {
     height: 200px;
     width: 200px;
+  }
+  #github-chart img {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -520,7 +546,8 @@ footer {
   }
 
   #about,
-  #projects {
+  #projects,
+  #work {
     padding: 20px 5px;
   }
 
@@ -533,13 +560,11 @@ footer {
     padding-left: 0;
   }
 
-  .content-title,
-  .content-sub-title {
+  .content-title {
     text-align: center;
   }
 
-  .skill,
-  .skill-small {
+  .skill {
     display: flex;
     align-items: center;
     flex: 1 1 100%;
