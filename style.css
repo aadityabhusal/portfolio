@@ -337,6 +337,7 @@ footer {
   display: flex;
   flex-direction: column;
   max-width: 100vw;
+  width: 100%;
 }
 
 .project,
@@ -501,7 +502,8 @@ footer {
 
   #about,
   #projects,
-  #work {
+  #work,
+  #additional {
     padding: 20px 5px;
   }
 
