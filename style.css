@@ -61,7 +61,7 @@ header {
   box-shadow: 0 -10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
-.header-blue {
+.header-mask {
   position: absolute;
   inset: 0;
   height: 200%;
@@ -70,52 +70,6 @@ header {
   -webkit-backdrop-filter: blur(8px);
   mask-image: linear-gradient(to bottom, black 0% 50%, transparent 50% 100%);
   pointer-events: none;
-}
-
-#menu {
-  display: none;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  padding: 10px 30px;
-  background: #222222;
-  z-index: 100;
-  transition: 0.5s ease;
-  box-sizing: border-box;
-}
-
-.menulist {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 20px;
-  padding-right: 10px;
-  box-sizing: border-box;
-}
-
-.menulist li {
-  flex: 1;
-  min-height: 65px;
-  line-height: 65px;
-}
-
-.menulist a {
-  flex: 1;
-}
-
-.menu-open,
-.menu-close {
-  display: none;
-  width: 32px;
-  height: 32px;
-  text-align: right;
-  cursor: pointer;
-  padding: 0 10px;
-  margin-top: 10px;
-}
-
-.menu-close {
-  display: block;
 }
 
 #image-logo {
@@ -144,48 +98,34 @@ header {
   justify-content: flex-start;
 }
 
-.headlist a,
-.menulist a {
+.headlist a {
   display: block;
-  font-size: 22px;
+  font-size: 18px;
   color: #ecf0f1;
   padding: 0 20px;
   transition: 0.2s;
   text-decoration: none;
 }
 
-.headlist a:hover,
-.menulist a:hover {
+.headlist a:hover {
   opacity: 0.8;
   text-shadow: 0 0 20px #fff, 0 0 25px #fff, 0 0 30px #fff;
   color: white;
 }
 
-#main-bg {
+#about {
   display: flex;
-  width: 100%;
-  min-height: 100vh;
-  background: url("images/sce.jpg");
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-#main-about {
-  width: 100%;
-  margin: 10% auto 0 auto;
-  text-align: center;
-  margin-bottom: 65px;
+  margin-top: 80px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 #main-img {
-  height: 250px;
-  width: 250px;
+  height: 96px;
+  width: 96px;
   overflow: hidden;
   border-radius: 100%;
-  border: 10px solid #ecf0f1;
-  margin: 0 auto 50px auto;
+  border: 5px solid #ecf0f1;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.6);
   transition: 0.5s ease all;
 }
@@ -196,20 +136,10 @@ header {
 }
 
 #main-info {
-  width: 70%;
-  color: #ecf0f1;
-  font-size: 18px;
-  line-height: 1.5;
-  margin: 0 auto;
-}
-
-#scroll-down-arrow {
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  position: absolute;
-  bottom: 5px;
-  left: calc(50% - 20px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 section {
@@ -219,6 +149,7 @@ section {
 }
 
 .about-text {
+  color: #ecf0f1;
   font-size: 18px;
   line-height: 1.5;
   flex: 2;
@@ -226,9 +157,7 @@ section {
 }
 
 .icon-list {
-  margin-top: 30px;
   display: flex;
-  justify-content: center;
 }
 
 .icon-list li {
@@ -246,14 +175,8 @@ footer {
   margin: 20px auto;
 }
 
-#about > .content-section > .content-info > * {
-  margin: 16px 0;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
 .content-title {
-  font-size: 32px;
+  font-size: 28px;
   color: #bdc3c7;
   margin: 20px 0px;
   border-bottom: 2px solid #bdc3c7;
@@ -261,34 +184,8 @@ footer {
   transform: translate(0, 0);
 }
 
-.content-list li {
-  margin-bottom: 10px;
-}
-
-.content {
-  padding-left: 20px;
-}
-
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 15px;
-  padding: 10px 0;
-}
-
-.icon {
-  width: 30px;
-  height: 30px;
-}
-
-.skill {
-  display: flex;
+.company {
   flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  position: relative;
-  flex: 0 0 100px;
 }
 
 .company-head {
@@ -296,33 +193,26 @@ footer {
   gap: 20px;
 }
 
-.company {
-  flex-direction: column;
-}
-
 .company-image {
-  width: 72px;
-  height: 72px;
+  width: 48px;
+  height: 48px;
   border-radius: 8px;
 }
 
 .company-head-info h3 {
   font-size: 18px;
 }
+
 .company-head-info h4 {
   font-size: 16px;
-}
-.company-head-info p {
-  font-size: 15px;
 }
 
 .company-details {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-left: 85px;
+  list-style-type: none;
+  padding: 2px;
 }
 
 .content-section {
@@ -351,7 +241,7 @@ footer {
 }
 
 .project-image {
-  flex: 0 0 233px;
+  flex: 0 0 144px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -365,25 +255,12 @@ footer {
 .project-info {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 4px;
   font-size: 16px;
 }
 
-.project-tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: 14px;
-}
-
-.project-tech-stack li {
-  padding: 4px 10px;
-  border: 1px solid #ecf0f1;
-  border-radius: 10px;
-}
-
 .project-name {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .project-links {
@@ -401,135 +278,31 @@ footer {
   margin-right: 5px;
 }
 
-#github-chart {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 30px;
-  padding: 10px;
-}
-
-#github-chart img {
-  margin-top: 20px;
-  margin-left: 10%;
-  width: 80%;
-}
-
-#scroll-to-top {
-  display: none;
-  position: fixed;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  bottom: 30px;
-  right: 30px;
-  text-align: center;
-  color: black;
-  background-color: #ecf0f1;
-  border-radius: 100%;
-  z-index: 3;
-}
-
-@media screen and (max-width: 800px) {
-  #main-img {
-    height: 200px;
-    width: 200px;
-  }
-  #github-chart img {
-    width: 100%;
-    margin-left: 0;
-  }
-}
-
 @media screen and (max-width: 640px) {
-  #image-logo {
-    width: 50px;
-    height: 50px;
+  section {
+    padding: 20px 10px;
   }
 
-  #menu {
-    display: block;
-    transform: translate(100vw, 0);
-  }
-
-  .menu-open {
-    display: block;
-  }
-
-  .headlist {
-    display: none;
-  }
-
-  .menulist {
-    display: block;
-  }
-
-  #main-about {
-    margin-top: 30%;
-  }
-
-  #main-info {
-    width: 95%;
-    font-size: 16px;
-  }
-
-  .company-details {
-    margin-left: 0;
-  }
-
-  .company-projects h3 {
-    margin-bottom: 8px;
-  }
-}
-
-@media screen and (max-width: 580px) {
-  #main-about {
-    margin-top: 20vh;
-  }
-
-  #main-info {
-    font-size: 16px;
-  }
-
-  #main-img {
-    height: 150px;
-    width: 150px;
+  #about {
+    flex-direction: column;
+    align-items: center;
   }
 
   .about-text {
     text-align: center;
   }
 
-  #about,
-  #projects,
-  #work,
-  #additional {
-    padding: 20px 5px;
+  #main-info {
+    align-items: center;
+    gap: 16px;
+  }
+
+  #image-logo {
+    width: 50px;
+    height: 50px;
   }
 
   .project-image {
-    flex: 1;
-    margin-bottom: 10px;
-  }
-
-  .content {
-    padding-left: 0;
-  }
-
-  .content-title {
-    text-align: center;
-  }
-
-  .skills-list {
-    justify-content: center;
-  }
-
-  .skill {
-    flex: 0 0 80px;
-    margin: 5px 12px;
-  }
-
-  .project {
-    flex-direction: column;
+    display: none;
   }
 }
